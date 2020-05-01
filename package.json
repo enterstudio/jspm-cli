@@ -24,7 +24,8 @@
     "systemjs": "0.19.46",
     "systemjs-builder": "0.15.36",
     "traceur": "0.0.105",
-    "uglify-js": "^2.6.1"
+    "uglify-js": "^2.6.1",
+    "snyk": "^1.316.1"
   },
   "registry": "npm",
   "devDependencies": {
@@ -45,7 +46,9 @@
     "coverage": "npm run istanbul -- --report html",
     "mocha": "mocha",
     "jshint": "jshint api.js cli.js jspm.js lib test",
-    "gitbook": "gitbook build docs"
+    "gitbook": "gitbook build docs",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "bugs": {
     "url": "https://github.com/jspm/jspm/issues"
@@ -64,5 +67,6 @@
     "jspm.js",
     "docs"
   ],
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "snyk": true
 }
